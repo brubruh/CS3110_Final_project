@@ -5,8 +5,4 @@ The bottom cells will display graphs of the plots for comparisons between the di
 
 The top cells will be the import functions and algorithms use.
 
-For this project we will use k-anonymity, l-diversity, t-closeness on locations. 
-
-
-
-
+For this project we will use k-anonymity, l-diversity, t-closeness on locations.
