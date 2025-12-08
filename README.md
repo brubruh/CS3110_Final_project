@@ -10,4 +10,3 @@ For this project we will use k-anonymity, l-diversity, t-closeness on locations.
 
 
 
-can you use the @README.md as a framework for a differential privacy project that follows these guidelines:  build a complete system that accomplishes a realistic task while ensuring differential privacy, we need you to make the geographical user location syntethic data. Make it all one file in the style of a notebook. 
