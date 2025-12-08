@@ -3,7 +3,7 @@ This project will be a jupyter notebook, that has a series of functions. Some of
 
 The bottom cells will display graphs of the plots for comparisons between the different DP algorithms we use.
 
-The bottom cells will 
+The top cells will be the import functions and algorithms use.
 
 For this project we will use k-anonymity, l-diversity, t-closeness on locations. 
 
