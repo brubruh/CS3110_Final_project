@@ -7,3 +7,5 @@ The top cells will be the import functions and algorithms use.
 
 For this project we will use k-anonymity, l-diversity, t-closeness on locations. 
 
+
+
