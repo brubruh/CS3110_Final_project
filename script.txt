@@ -1,0 +1,32 @@
+
+Outlining 5-Minute Cells Script
+
+
+Speaker A (Cells 1–6: intro, imports, config, raw data, DP mechanisms, privacy checks)
+
+“We start with the goals: generate synthetic location data that preserves patterns while providing differential privacy, plus extra safeguards like k-anonymity, l-diversity, and t-closeness.”
+
+“Imports and helpers define Laplace and Gaussian mechanisms, plus percent-error utilities. We set a DPConfig for reproducibility—grid size, epsilon budgets for counts and release, jitter noise, and privacy thresholds.”
+
+“The raw dataset is synthetic: we place metro centers and sprinkle additional towns, then sample 10,000 users with city-specific weights. Each user is jittered around their home center with Gaussian and Laplace drift, giving a realistic but non-private baseline.”
+
+“Step 2 grids the bounding box. We compute true grid counts, then add Laplace noise (dp_counts) and separately Gaussian noise (gauss_counts). From each noisy grid we sample synthetic points (syn_df for Laplace, gauss_syn_df for Gaussian) and jitter around cell centers.”
+
+“Step 3 applies bucketization by nearest metro. We run k-anonymity and l-diversity on those buckets, and t-closeness via JS divergence. We produce a small table privacy_checks comparing Laplace and Gaussian variants.”
+
+
+Speaker B (Cells 7–end: utility, visuals, bucket tables, percent error, comparisons, iteration)
+
+“Step 4 is utility: JS divergence on bucket distributions and average spatial error (km) for each variant, shown in utility_report.”
+
+“Step 5 visualizes raw vs Laplace vs Gaussian as side-by-side scatters on shared axes to eyeball geographic fidelity.”
+
+“Next, bucket counts table shows raw, DP Laplace, and DP Gaussian counts per city—helpful to see aggregate shifts.”
+
+“The percent-error cell plots city-level percent error bars and grid-cell error histogram for the Laplace run, plus printed mean bucket and grid percent errors.”
+
+“A comparison cell rebuilds both mechanisms and bar-plots mean bucket/grid percent errors across Laplace vs Gaussian.”
+
+“There’s also an iterative averages cell (if you run it) that repeats draws to report average absolute and percent differences per city across multiple seeds—useful to smooth randomness.”
+
+“Takeaway: Laplace and Gaussian both preserve coarse patterns; privacy checks are met under current thresholds; utility shows modest JS and spatial error. Adjust epsilon_counts or jitter to trade privacy for accuracy, and rerun cells 2–5 to update all tables and plots.”
